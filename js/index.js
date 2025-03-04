@@ -1,7 +1,7 @@
 const authEndPoint = 'https://accounts.spotify.com/authorize'
 const clientId = '6ce2e3aa41b949cc9806d3b53a39def4'
 const redirectUri = window.location.hostname.includes("github.io")
-?'https://lizzymak.github.io/SpotifyStats/html/callback.html'
+?'http://lizzymak.github.io/SpotifyStats/html/callback.html'
 :'http://localhost:5500/html/callback.html'
 const scope = 'user-read-private user-read-email user-top-read user-read-recently-played'
 

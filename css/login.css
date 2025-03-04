@@ -1,0 +1,135 @@
+@font-face {
+    font-family: myFont;
+    src: url(Gotham-Black.otf);
+}
+
+body{
+  font-family: myFont;
+  background: linear-gradient(to bottom, #282828, #212121, #121212);
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+h1,
+h2{
+    color:white;
+    font-size: 3rem;
+}
+
+.title img {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.title h1 {
+  display: inline;
+  
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 10%;
+}
+
+
+button{
+    color: white;
+    border-radius: 15px;
+    background-color: #1db954;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border:none;
+    padding: 10px 20px;
+    font-family: myFont;
+    margin-left: 5px;
+    margin-top: 10%;
+    scale:1.5;
+}
+
+button:hover{
+    background-color: #22dd64;
+    transition: opacity .3s;
+}
+
+.section{
+    display:block;
+}
+
+.dropping-texts {
+    display: inline;
+    margin-top: 15%;
+    width: 180px;
+    height: 50px;
+    color: white;
+    scale:1.5;
+}
+
+.dropping-texts label{
+    margin-right: 3%;
+    display: inline;
+    height: 50px;
+    color: white;
+}
+  
+.dropping-texts div {
+    display: inline;
+    position: absolute;
+    opacity:0;
+    color: #1db954;
+}
+  
+  .dropping-texts div:nth-child(2) {
+    animation: roll 4s linear infinite 0s;
+  }
+  .dropping-texts div:nth-child(3) {
+    animation: roll 4s linear infinite 2s;
+  }
+  
+  @keyframes roll {
+    0% {
+      font-size:0px;
+      opacity:0;
+      margin-top:0px;
+      transform: rotate(-25deg);
+    }
+    3% {
+      opacity:1;
+      transform: rotate(0deg);
+    }
+    5% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+    }
+    20% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+      transform: rotate(0deg);
+    }
+    27% {
+      font-size:0px;
+      opacity:0.5;
+      margin-left:20px;
+      margin-top:40px;
+    }
+    100% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(15deg);
+    }
+  }
+  

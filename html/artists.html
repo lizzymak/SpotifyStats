@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="sidebar">
@@ -28,6 +28,15 @@
 
         <div class="grid" id="top-artists"></div>
     </div>
-    <script type="module" src="/js/topArtists.js"></script>
+    <script>
+        const basePath = window.location.hostname.includes("github.io")
+        ? "/SpotifyStats/js/topArtists.js"  // GitHub Pages absolute path
+        : "../js/topArtists.js"; 
+            const script = document.createElement("script");
+            script.src = basePath;
+            script.type="module"
+            document.body.appendChild(script);
+          </script>
+    <!-- <script type="module" src="/js/topArtists.js"></script> -->
 </body>
 </html>

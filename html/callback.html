@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-    //     const basePath = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
-    //       ? "/js/callback.js"
-    //       : "/SpotifyStats/js/callback.js";
-    //   console.log(basePath)
     const basePath = window.location.hostname.includes("github.io")
     ? "/SpotifyStats/js/callback.js"  // GitHub Pages absolute path
     : "../js/callback.js"; 
@@ -17,7 +13,6 @@
         script.type="module"
         document.head.appendChild(script);
       </script>
-    <!-- <script type="module" src="/js/callback.js"></script> -->
 </head>
 
 <body>

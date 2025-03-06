@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="module" src="./js/callback.js"></script>
+    <script>
+        const basePath = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+          ? "/js/callback.js"
+          : "/SpotifyStats/js/callback.js";
+      
+        const script = document.createElement("script");
+        script.src = basePath;
+        document.body.appendChild(script);
+      </script>
+    <!-- <script type="module" src="/js/callback.js"></script> -->
 </head>
 
 <body>

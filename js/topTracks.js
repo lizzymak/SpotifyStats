@@ -56,7 +56,9 @@ document.getElementById("allTime").addEventListener('click', () =>{
 //logout button-redirects to login page and removes token
 document.getElementById("logoutButton").addEventListener('click', () =>{
     localStorage.removeItem("access_token")
-    window.location.href="/index.html"
+    const redirectPath = window.location.hostname.includes("github.io")
+    ? "/SpotifyStats/index.html" : "/index.html";
+    window.location.href = redirectPath;
 })
 
 

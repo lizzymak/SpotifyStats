@@ -27,10 +27,7 @@ async function loadTopArtists(term){
 
 //buttons on the side 
 document.getElementById("home-button").addEventListener('click', () =>{
-    const basePath = window.location.hostname.includes("github.io")
-        ? "/SpotifyStats/html/profile.html"  // GitHub Pages absolute path
-        : "../html/profile.html"; 
-    window.location.href=basePath
+    window.location.href="./profile.html"
 })
 
 document.getElementById("top-tracks-button").addEventListener('click', () =>{
@@ -61,7 +58,9 @@ document.getElementById("allTime").addEventListener('click', () =>{
 //logout button-redirects to login page and removes token
 document.getElementById("logoutButton").addEventListener('click', () =>{
     localStorage.removeItem("access_token")
-    window.location.href="/index.html"
+    const redirectPath = window.location.hostname.includes("github.io")
+    ? "/SpotifyStats/index.html" : "/index.html";
+    window.location.href = redirectPath;
 })
 
 loadTopArtists("medium_term")

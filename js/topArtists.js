@@ -27,7 +27,10 @@ async function loadTopArtists(term){
 
 //buttons on the side 
 document.getElementById("home-button").addEventListener('click', () =>{
-    window.location.href="./profile.html"
+    const basePath = window.location.hostname.includes("github.io")
+        ? "/SpotifyStats/html/profile.html"  // GitHub Pages absolute path
+        : "../html/profile.html"; 
+    window.location.href=basePath
 })
 
 document.getElementById("top-tracks-button").addEventListener('click', () =>{

@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <script>
+        const cssPath = window.location.hostname.includes("github.io")
+        ? "/SpotifyStats/css/main"  // GitHub Pages absolute path
+        : "../css/main.css"; 
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href=cssPath
+            document.head.appendChild(link);
+    </script>
 </head>
 <body>
     <div class="sidebar">
@@ -28,6 +36,14 @@
         
         <div class="grid" id="top-tracks"></div>
     </div>
-    <script type="module" src="../js/topTracks.js"></script>
+    <script>
+        const basePath = window.location.hostname.includes("github.io")
+        ? "/SpotifyStats/js/topTracks.js"  // GitHub Pages absolute path
+        : "../js/topTracks.js"; 
+            const script = document.createElement("script");
+            script.src = basePath;
+            script.type="module"
+            document.body.appendChild(script);
+    </script>
 </body>
 </html>

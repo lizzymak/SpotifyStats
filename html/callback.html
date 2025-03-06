@@ -6,12 +6,13 @@
     <title>Document</title>
     <script>
         const basePath = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
-          ? "./js/callback.js"
+          ? "/js/callback.js"
           : "/SpotifyStats/js/callback.js";
-      
+      console.log(basePath)
         const script = document.createElement("script");
         script.src = basePath;
-        document.body.appendChild(script);
+        script.type="module"
+        document.head.appendChild(script);
       </script>
     <!-- <script type="module" src="/js/callback.js"></script> -->
 </head>
